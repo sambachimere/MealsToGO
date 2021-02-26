@@ -1,6 +1,6 @@
 import React from "react";
 import { FlatList } from "react-native";
-import { Searchbar,  ActivityIndicator, Colors } from "react-native-paper";
+import { Searchbar, ActivityIndicator, Colors } from "react-native-paper";
 import styled from "styled-components";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
