@@ -9,12 +9,12 @@ import open from "../../../../assets/open";
 import {
   RestaurantCard,
   RestaurantCardCover,
-  Address,
   Info,
-  Rating,
   Section,
   SectionEnd,
+  Rating,
   Icon,
+  Address,
 } from "./restaurant-info-card.styles";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {

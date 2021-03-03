@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FlatList } from "react-native";
+import styled from "styled-components/native";
 import { ActivityIndicator, Colors } from "react-native-paper";
-import styled from "styled-components";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -26,10 +26,8 @@ const LoadingContainer = styled.View`
   left: 50%;
 `;
 
-const RestaurantsScreen = () => {
-  const { isLoading, error, restaurants } = React.useContext(
-    RestaurantsContext
-  );
+export const RestaurantsScreen = () => {
+  const { isLoading, error, restaurants } = useContext(RestaurantsContext);
   return (
     <SafeArea>
       {isLoading && (
@@ -42,7 +40,7 @@ const RestaurantsScreen = () => {
         data={restaurants}
         renderItem={({ item }) => {
           return (
-            <Spacer position="bottom">
+            <Spacer position="bottom" size="large">
               <RestaurantInfoCard restaurant={item} />
             </Spacer>
           );
@@ -52,5 +50,3 @@ const RestaurantsScreen = () => {
     </SafeArea>
   );
 };
-
-export default RestaurantsScreen;
