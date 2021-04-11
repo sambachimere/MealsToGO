@@ -8,4 +8,5 @@ export const isDevelopment = process.env.NODE_ENV === "development";
 
 // export const isMock = false;
 export const isMock = true;
-export const host = !isDevelopment || isAndroid ? liveHost : localHost;
+// export const host = !isDevelopment || isAndroid ? liveHost : localHost;
+export const host = liveHost;
